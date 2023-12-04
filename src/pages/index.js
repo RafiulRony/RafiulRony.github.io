@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { LinkArrow } from "@/components/icons";
 import Head from "next/head";
 import Link from "next/link";
+import HireMe from "@/components/HireMe";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,9 @@ export default function Home() {
               alt=""
               className="w-full h-auto"
             />
+            <div>
+              <HireMe/>
+            </div>
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
             <AnimatedText
@@ -37,7 +41,7 @@ export default function Home() {
             rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
             border-2 border-solid border-transparent hover:border-dark
             "
-                // download={true}
+                download={true}
               >
                 Resume
                 <LinkArrow className={"w-6 ml-1"} />
