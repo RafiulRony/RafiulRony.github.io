@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Details = ({type, time, place, info}) =>{
+const Details = ({type, time, place, info}) => {
     return<li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
         <div>
             <h3 className='capitalize font-bold text-2xl'>{type}</h3>
