@@ -34,9 +34,6 @@ const Education = () => {
                 complex database structures, DOM manipulation, building user interfaces, 
                 Building web application, SQL and database querying, " 
                 />
-
-               
-
             </ul>
         </div>
     </div>

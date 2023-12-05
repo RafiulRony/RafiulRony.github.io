@@ -14,7 +14,7 @@ const NavBar = () => {
             <NavLink href="/" title="Home" className='mr-4'/>
             <NavLink href="/about" title="About" className='mx-4'/>
             <NavLink href="/projects" title="Projects" className='mx-4'/>
-            <NavLink href="/articles" title="Articles" className='ml-4'/>
+            <NavLink href="/articles" title="Contact" className='ml-4'/>
         </nav>
         
         <nav className="flex items-center justify-center flex-wrap">
