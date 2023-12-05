@@ -5,6 +5,7 @@ import { LinkArrow } from "@/components/icons";
 import Head from "next/head";
 import Link from "next/link";
 import HireMe from "@/components/HireMe";
+import Image from "next/image";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -14,10 +15,12 @@ export default function Home() {
       <Layout className="pt-0 flex items-center justify-center">
         <main className="flex items-center text-dark w-full min-h-screen">
           <div className="w-1/2">
-            <img
-              src={"/images/profile/developer-pic-1.png"}
+            <Image
+              src={"/images/profile/mypic.jpg"}
               alt=""
-              className="w-full h-auto"
+              width={300}
+              height={300}
+              className="w-[65%] h-auto ml-28"
             />
             <div>
               <HireMe/>
