@@ -18,9 +18,9 @@ export default function Home() {
             <Image
               src={"/images/profile/mypic.jpg"}
               alt=""
-              width={300}
-              height={300}
-              className="w-[65%] h-auto ml-28"
+              width={800}
+              height={500}
+              className="w-[65%] ml-28"
             />
             <div>
               <HireMe/>
