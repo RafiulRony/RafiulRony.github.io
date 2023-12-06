@@ -12,6 +12,7 @@ const about = () => {
   return (
     <>
     <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>Rafiul | About Page</title>
     </Head>
     <main className='flex w-full flex-col items-center justify-center'>
@@ -37,7 +38,7 @@ const about = () => {
             bg-light p-8
             '>
                 <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-                <Image src={profilePic} alt="rafiul" className='w-full h-auto rounded-xl' />
+                <Image src={profilePic} alt="profile pic" className='w-full h-auto rounded-xl' />
             </div>
             <div className='col-span-2 flex flex-col items-end justify-between'>
                 <div className='flex flex-col items-end justify-center'>
