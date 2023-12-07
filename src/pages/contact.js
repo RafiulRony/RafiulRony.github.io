@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import React from "react";
 import Link from "next/link";
+import InputArea from "@/components/form/InputArea";
 
 const contact = () => {
   return (
@@ -50,7 +51,7 @@ const contact = () => {
                 />
               </div>
               <div className="flex flex-col mb-4">
-                <label htmlFor="subject" className="mb-2">
+                {/* <label htmlFor="subject" className="mb-2">
                   Subject
                 </label>
                 <input
@@ -58,6 +59,15 @@ const contact = () => {
                   type="text"
                   id="subject"
                   required
+                /> */}
+                <InputArea 
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                label={"Subject"}
+                id={"subject"}
+                type="text"
+
                 />
               </div>
               <div className="flex flex-col mb-4">
