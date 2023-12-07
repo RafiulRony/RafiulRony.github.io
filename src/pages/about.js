@@ -16,11 +16,12 @@ const about = () => {
     </Head>
     <main className='flex w-full flex-col items-center justify-center'>
     <Layout className='pt-16'>
-        <AnimatedText text="Passion Fuels Purpose!" className='mb-16' />
-        <div className='grid w-full grid-cols-8 gap-16'>
-            <div className='col-span-3 flex flex-col items-start justify-start'>
+        <AnimatedText text="Passion Fuels Purpose!" className='mb-16 sm:text-4xl md:text-5xl lg:text-8xl' />
+        <div className='grid w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-2 lg:gap-16'>
+            <div className='col-span-1 flex flex-col items-start justify-start'>
                 <h2 className='mb-4 text-lg fond-bold uppercase text-dark/75'>Biography</h2>
-                <p className='font-medium'>Hi, I&apos;m Rafiul Islam, a web developer and UI/UX designer 
+                <p className='font-medium
+                .'>Hi, I&apos;m Rafiul Islam, a web developer and UI/UX designer 
                 with a passion for creating beautiful, functional, and user-centered digital experiences. 
                 With 1 years of experience in the field. I am always looking for new and innovative 
                 ways to bring my clients visions to life.</p>
@@ -33,27 +34,27 @@ const about = () => {
                 skills and passion to your next project.</p>
 
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
-            bg-light p-8
+            <div className='lg:col-span-1 relative h-max rounded-2xl border-2 border-solid border-dark
+            bg-light sm:m-10 p-4
             '>
                 <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-                <Image src={profilePic} alt="rafiul" className='w-full h-auto rounded-xl' />
+                <Image src={profilePic} alt="profile pic" className='w-full h-auto rounded-xl' />
             </div>
-            <div className='col-span-2 flex flex-col items-end justify-between'>
-                <div className='flex flex-col items-end justify-center'>
-                    <span className='inline-block text-7xl font-bold'>
+            <div className='lg:col-span-1 flex sm:flex-row lg:flex-col items-end justify-between ml-10 lg:pr-10'>
+                <div className='flex flex-col lg:items-end justify-center'>
+                    <span className='inline-block sm:text-5xl lg:text-7xl font-bold'>
                         5+
                     </span>
                     <h2 className='text-xl font-medium capitalize text-dark/75'>Satisfied clients</h2>
                 </div>
-                <div className='flex flex-col items-end justify-center'>
-                    <span className='inline-block text-7xl font-bold'>
+                <div className='flex flex-col lg:items-end justify-center'>
+                    <span className='inline-block sm:text-5xl lg:text-7xl font-bold'>
                         5+
                     </span>
                     <h2 className='text-xl font-medium capitalize text-dark/75'>Projects completed</h2>
                 </div>
-                <div className='flex flex-col items-end justify-center'>
-                    <span className='inline-block text-7xl font-bold'>
+                <div className='flex flex-col lg:items-end justify-center'>
+                    <span className='inline-block sm:text-5xl lg:text-7xl font-bold'>
                         1+
                     </span>
                     <h2 className='text-xl font-medium capitalize text-dark/75'>Years of experience</h2>
