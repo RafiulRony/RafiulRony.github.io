@@ -3,7 +3,7 @@ import React from 'react'
 const InputArea = ({onChange, label, id, type='text', className = '', required = true}) => {
   return (
     <>
-    <label htmlFor={id} className="mb-2">
+    <label htmlFor={id} className="mt-3">
       {label}
     </label>
     <input
