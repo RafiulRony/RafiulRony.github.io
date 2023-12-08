@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "@react-pdf/renderer": "^3.1.14",
     "canvas": "^2.11.2",
     "eslint": "8.36.0",
@@ -16,9 +17,11 @@
     "framer-motion": "^10.16.5",
     "isomorphic-dompurify": "^1.11.0",
     "jsdom": "^23.0.1",
+    "leaflet": "^1.9.4",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

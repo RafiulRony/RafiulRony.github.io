@@ -2,10 +2,17 @@ import Layout from "@/components/Layout";
 import React from "react";
 import Link from "next/link";
 import InputArea from "@/components/form/InputArea";
+import MapLocation from "@/components/MapLocation";
+import Head from "next/head";
+
 
 const contact = () => {
   return (
     <>
+    <Head>
+        <title>Rafiul | Contact Page</title>
+        
+    </Head>
       <Layout>
       <div className='flex flex-col'>
         <div className='flex flex-col items-center justify-center'>
@@ -22,44 +29,32 @@ const contact = () => {
             </a>
           </p>
         </div>
-        <div className='grid grid-cols-2'>
+        <div className='grid sm:grid-cols-1 lg:grid-cols-2'>
             <div className='col-span-1 text-center m-auto'>
-              google-map.
+              GoogleMap.
             </div>
-            <div className='col-span-1 p-0 items-start w-1/2'>
+            <div className='col-span-1 p-0 items-start lg:w-1/2'>
               <form className="my-8">
+             
               <div className="flex flex-col mb-4">
-                <label htmlFor="name" className="mb-2">
-                  Name
-                </label>
-                <input
-                  className='rounded-lg bg-gray-200 mt-2 p-2  focus:outline-blue-800'
-                  type="text"
-                  id="name"
-                  required
+              <InputArea 
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                label={"Name"}
+                id={"name"}
+                type="email"
                 />
-              </div>
-              <div className="flex flex-col mb-4">
-                <label htmlFor="email" className="mb-2">
-                  Email
-                </label>
-                <input
-                  className='rounded-lg bg-gray-200 mt-2 p-2  focus:outline-blue-800'
-                  type="email"
-                  id="email"
-                  required
+
+                <InputArea 
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+                label={"Email"}
+                id={"email"}
+                type="email"
                 />
-              </div>
-              <div className="flex flex-col mb-4">
-                {/* <label htmlFor="subject" className="mb-2">
-                  Subject
-                </label>
-                <input
-                  className='rounded-lg bg-gray-200 mt-2 p-2  focus:outline-blue-800'
-                  type="text"
-                  id="subject"
-                  required
-                /> */}
+
                 <InputArea 
                 onChange={(e) => {
                   console.log(e.target.value);
@@ -67,8 +62,8 @@ const contact = () => {
                 label={"Subject"}
                 id={"subject"}
                 type="text"
-
                 />
+                
               </div>
               <div className="flex flex-col mb-4">
                 <label htmlFor="body" className="mb-2">

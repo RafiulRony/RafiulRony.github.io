@@ -7,7 +7,7 @@ const Layout = ({ children, className }) => {
     <div>
       <NavBar />
       <div
-        className={`w-full h-full inline-block z-0 bg-light p-32 ${className}`}
+        className={`w-full h-full inline-block z-0 bg-light p-20 lg:p-32 ${className}`}
       >
         {children}
         
