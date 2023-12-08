@@ -7,7 +7,7 @@ const MotionLink = motion.a;
 const logo = () => {
   return (
     <div className='flex items-center justify-center mt-2'>
-    <MotionLink href="/"
+    <MotionLink href="/index"
     className='w-16 h-16 bg-dark text-light flex items-center justify-center 
     rounded-full text-2xl font-bold'
     whileHover={{ 
