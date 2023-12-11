@@ -31,7 +31,7 @@ const contact = () => {
         </div>
         <div className='grid sm:grid-cols-1 lg:grid-cols-2'>
             <div className='col-span-1 text-center m-auto'>
-              GoogleMap.
+              <MapLocation/>
             </div>
             <div className='col-span-1 p-0 items-start lg:w-1/2'>
               <form className="my-8">
