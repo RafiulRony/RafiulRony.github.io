@@ -4,14 +4,16 @@ import Link from "next/link";
 import InputArea from "@/components/form/InputArea";
 import MapLocation from "@/components/MapLocation";
 import Head from "next/head";
+import useContact from "@/hooks/useContact";
 
 
-const contact = () => {
+const Contact = () => {
+  const { register, handleSubmit, onsubmit, errors} = useContact()
+  console.log(errors);
   return (
     <>
     <Head>
         <title>Rafiul | Contact Page</title>
-        
     </Head>
       <Layout>
       <div className='flex flex-col'>
@@ -34,53 +36,44 @@ const contact = () => {
               <MapLocation/>
             </div>
             <div className='col-span-1 p-0 items-start lg:w-1/2'>
-              <form className="my-8">
+              <form className="my-8" onSubmit={handleSubmit(onsubmit)}>
              
               <div className="flex flex-col mb-4">
-              <InputArea 
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
+
+              <InputArea
                 label={"Name"}
                 id={"name"}
-                type="email"
-                />
-
-                <InputArea 
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
-                label={"Email"}
+                type="text" 
+                register={register("name", { required: 'Name is required' })}
+              />
+              <InputArea
+                label={"Email Address"}
                 id={"email"}
-                type="email"
-                />
+                type="email" 
+                register={register("email", { required: 'email is required' })}
+              />
+              <InputArea
+                label={"phone"}
+                id={"Phone"}
+                type="text" 
+                register={register("phone", { required: 'phone is required' })}
+              />
 
-                <InputArea 
-                onChange={(e) => {
-                  console.log(e.target.value);
-                }}
-                label={"Subject"}
-                id={"subject"}
-                type="text"
-                />
-                
               </div>
-              <div className="flex flex-col mb-4">
+                <div className="flex flex-col mb-4">
                 <label htmlFor="body" className="mb-2">
                   Message
                 </label>
-                <textarea
+               <textarea {...register("message", {required:'message is required'})}
                   className="rounded-md py-2 px-3 bg-gray-200 focus:outline-blue-800"
-                  id="body"
                   required
                 ></textarea>
-              </div>
-              <button
-                type="submit"
+                </div>
+                <input type="submit"
+                value='send'
                 className="bg-blue-500 text-white py-2 px-4 rounded-md"
-                >
-                Send
-              </button>
+                />
+
               </form>
             </div>
         </div>
@@ -90,4 +83,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
