@@ -5,6 +5,7 @@ import InputArea from "@/components/form/InputArea";
 import MapLocation from "@/components/MapLocation";
 import Head from "next/head";
 import useContact from "@/hooks/useContact";
+import InputTextArea from "@/components/form/inputTextArea";
 
 
 const Contact = () => {
@@ -53,27 +54,23 @@ const Contact = () => {
                 register={register("email", { required: 'email is required' })}
               />
               <InputArea
-                label={"phone"}
-                id={"Phone"}
+                label={"Phone"}
+                id={"phone"}
                 type="text" 
                 register={register("phone", { required: 'phone is required' })}
               />
 
-              </div>
-                <div className="flex flex-col mb-4">
-                <label htmlFor="body" className="mb-2">
-                  Message
-                </label>
-               <textarea {...register("message", {required:'message is required'})}
-                  className="rounded-md py-2 px-3 bg-gray-200 focus:outline-blue-800"
-                  required
-                ></textarea>
-                </div>
-                <input type="submit"
-                value='send'
-                className="bg-blue-500 text-white py-2 px-4 rounded-md"
-                />
+              <InputTextArea
+                label = {"Message"}
+                id = {"message"}
+                register={register("message", {required: 'message is required'})}
+              />
+              <input type="submit"
+              value='send'
+              className="bg-blue-500 text-white py-2 px-4 rounded-md"
+              />
 
+              </div>
               </form>
             </div>
         </div>
