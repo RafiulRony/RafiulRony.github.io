@@ -8,6 +8,7 @@ import useContact from "@/hooks/useContact";
 import InputTextArea from "@/components/form/inputTextArea";
 
 
+
 const Contact = () => {
   const { register, handleSubmit, onsubmit, errors} = useContact()
   console.log(errors);
