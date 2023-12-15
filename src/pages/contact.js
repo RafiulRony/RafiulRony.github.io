@@ -6,6 +6,8 @@ import MapLocation from "@/components/MapLocation";
 import Head from "next/head";
 import useContact from "@/hooks/useContact";
 import InputTextArea from "@/components/form/inputTextArea";
+import emailjs from '@emailjs/browser';
+
 
 
 const Contact = () => {
