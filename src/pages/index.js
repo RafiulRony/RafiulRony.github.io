@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import { LinkArrow } from "@/components/icons";
@@ -6,31 +6,45 @@ import Head from "next/head";
 import Link from "next/link";
 import HireMe from "@/components/HireMe";
 import Image from "next/image";
-// import profilePic from "../../public/images/profile/developer-pic-1.jpg"
-// import ProfilePicture from "@/../public/images/profile/mypic.jpg"
+import Script from "next/script";
 
-
-// const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Home = () => {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3H7JM8VK2E');
+  }, []);
   return (
     <>
+      <Head>
+        {/* Other meta tags or title */}
+      </Head>
+
       <Layout className="pt-0 flex items-center justify-center">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3H7JM8VK2E"
+          strategy="afterInteractive"
+        />
+        <Script strategy="lazyOnload" id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3H7JM8VK2E');
+          `}
+        </Script>
+
         <main className="grid sm:grid-cols-1 md:grid-cols-2 items-center text-dark w-full min-h-screen">
           <div className="lg:w-full sm:col-span-1">
-          <div className='lg:col-span-1 relative lg:h-[50%] w-2/3  rounded-2xl border-2 border-solid border-dark
-            bg-light sm:m-10 p-4
-            '>
-                <Image 
+            <div className='lg:col-span-1 relative lg:h-[50%] w-2/3 rounded-2xl border-2 border-solid border-dark bg-light sm:m-10 p-4'>
+              <Image 
                 src={"/images/profile/mypic.jpg"} 
                 width={200}
                 height={200}
                 alt="profile pic" 
-                className=' w-full h-full rounded-xl' />
-            </div>
-            <div>
-              {/* pending. need to change svg */}
-              {/* <HireMe/> */} 
+                className=' w-full h-full rounded-xl' 
+              />
             </div>
           </div>
           <div className="md:w-full  flex flex-col items-center self-center sm:mt-0">
@@ -47,10 +61,7 @@ export default function Home() {
               <a
                 href="https://drive.google.com/file/d/159WGUMnoje0DvelUfB5710yKU3xGRoqn/view"
                 target="_blank"
-                className="flex items-center bg-dark text-light p-2.5 px-6
-            rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
-            border-2 border-solid border-transparent hover:border-dark
-            "
+                className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
                 download={true}
               >
                 Resume
@@ -69,4 +80,6 @@ export default function Home() {
       </Layout>
     </>
   );
-}
+};
+
+export default Home;
