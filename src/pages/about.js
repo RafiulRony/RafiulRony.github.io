@@ -21,17 +21,17 @@ const about = () => {
             <div className='col-span-1 flex flex-col items-start justify-start'>
                 <h2 className='mb-4 text-lg fond-bold uppercase text-dark/75'>Biography</h2>
                 <p className='font-medium
-                .'>Hi, I&apos;m Rafiul Islam, a web developer and UI/UX designer 
-                with a passion for creating beautiful, functional, and user-centered digital experiences. 
-                With 1 years of experience in the field. I am always looking for new and innovative 
-                ways to bring my clients visions to life.</p>
-                <p className='my-4 font-medium'>I believe that design is about more than just making 
-                things look pretty – it&apos;s about solving problems and creating intuitive, enjoyable 
-                experiences for users.</p>
-                <p className='font-medium'>Whether I&apos;m working on a website, mobile app, or 
-                other digital product, I bring my commitment to design excellence and user-centered 
-                thinking to every project I work on. I look forward to the opportunity to bring my 
-                skills and passion to your next project.</p>
+                .'>Hello, I&apos;m Rafiul Islam, a dedicated web developer specializing in the MERN stack, 
+                with a keen eye for crafting engaging and user-centric digital solutions. I believe that 
+                design is about more than just making things look pretty – it&apos;s about solving problems 
+                and creating intuitive, enjoyable experiences for users</p>
+                <p className='my-4 font-medium'>Whether I&apos;m working on a website, mobile app, or other 
+                digital product, I bring my commitment to design excellence and user-centered thinking 
+                to every project I work on. With a year of hands-on experience, I&apos;m driven to fuse creativity 
+                and functionality to actualize my clients&apos; visions in innovative ways.</p>
+                <p className='font-medium'>I look forward to the opportunity to bring my skills and passion 
+                to your next project. Let&apos;s collaborate to create something exceptional that not only looks 
+                great but also enriches user experiences.</p>
 
             </div>
             <div className='lg:col-span-1 relative h-max rounded-2xl border-2 border-solid border-dark

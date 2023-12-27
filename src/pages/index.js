@@ -29,7 +29,8 @@ export default function Home() {
                 className=' w-full h-full rounded-xl' />
             </div>
             <div>
-              <HireMe/>
+              {/* pending. need to change svg */}
+              {/* <HireMe/> */} 
             </div>
           </div>
           <div className="md:w-full  flex flex-col items-center self-center sm:mt-0">
@@ -40,7 +41,7 @@ export default function Home() {
             <p className="text-xl">
               As a skilled full-stack developer, I am dedicated to turning ideas
               into innovative web applications. Explore my latest projects and
-              articles, showcasing my expertise in React.js and web development.
+              articles, showcasing my expertise in MERN stack and web development.
             </p>
             <div className="flex items-center self-start mt-2 sm:p-10">
               <a
