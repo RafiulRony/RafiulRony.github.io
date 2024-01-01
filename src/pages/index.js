@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        {/* Other meta tags or title */}
+      <title>Rafiul | Home Page</title>
       </Head>
 
       <Layout className="pt-0 flex items-center justify-center">
