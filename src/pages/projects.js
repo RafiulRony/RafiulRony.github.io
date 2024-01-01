@@ -1,16 +1,16 @@
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
-import { GithubIcon } from '@/components/icons'
-import Head from 'next/head'
-import Link from 'next/link'
-import React from 'react'
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg"
-import Image from 'next/image'
+import AnimatedText from '@/components/AnimatedText';
+import Layout from '@/components/Layout';
+import { GithubIcon } from '@/components/icons';
+import Head from 'next/head';
+import Link from 'next/link';
+import React, { useEffect } from 'react';
+import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import Image from 'next/image';
+import Script from 'next/script';
 
-
-const Project = ({feature = false, title, type, summary, img, link, github}) => {
-    return(
-        <article className={`w-full flex ${feature ? "flex-row": "flex-col p-6"} items-center justify-center rounded-2xl
+const Project = ({ feature = false, title, type, summary, img, link, github }) => {
+  return (
+    <article className={`w-full flex ${feature ? "flex-row": "flex-col p-6"} items-center justify-center rounded-2xl
         border border-solid border-dark bg-light  relative`}>
             <Link href={link} target="_blank"
             className='w-full cursor-pointer overflow-hidden rounded-lg'
@@ -31,20 +31,25 @@ const Project = ({feature = false, title, type, summary, img, link, github}) => 
                 </div>
             </div>
         </article>
-    )
-}
+  );
+};
 
-const projects = () => {
-
+const Projects = () => {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3H7JM8VK2E'); 
+  }, []);
   return (
     <>
-    <Head>
+      <Head>
         <title>Rafiul | Projects Page</title>
         <meta name="description" content="any description" />
-    </Head>
-    <main className="w-full mb-16 flex flex-col ">
+      </Head>
+      <main className="w-full mb-16 flex flex-col ">
         <Layout className="pt-16">
-            <AnimatedText text="Imagination Trumps Knowledge" className='lg:text-5xl mb-16'/>
+        <AnimatedText text="Imagination Trumps Knowledge" className='lg:text-5xl mb-16'/>
             <div className="grid grid-cols-12 gap-24">
                 <div className="col-span-12">
                     <Project
@@ -92,9 +97,21 @@ const projects = () => {
                 </div>
             </div>
         </Layout>
-    </main>
+      </main>
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-3H7JM8VK2E'
+        strategy='afterInteractive'
+      />
+      <Script strategy='lazyOnload' id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3H7JM8VK2E');
+        `}
+      </Script>
     </>
-  )
-}
+  );
+};
 
-export default projects
+export default Projects;

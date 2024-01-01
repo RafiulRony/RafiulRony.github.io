@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import InputArea from "@/components/form/InputArea";
 import MapLocation from "@/components/MapLocation";
@@ -7,17 +7,24 @@ import Head from "next/head";
 import useContact from "@/hooks/useContact";
 import InputTextArea from "@/components/form/inputTextArea";
 import emailjs from '@emailjs/browser';
-
-
+import Script from 'next/script';
 
 const Contact = () => {
-  const { register, handleSubmit, onsubmit, errors} = useContact()
+  const { register, handleSubmit, onsubmit, errors} = useContact();
   console.log(errors);
+
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3H7JM8VK2E');
+  }, []);
+
   return (
     <>
-    <Head>
+      <Head>
         <title>Rafiul | Contact Page</title>
-    </Head>
+      </Head>
       <Layout>
       <div className='flex flex-col'>
         <div className='flex flex-col items-center justify-center'>
@@ -76,8 +83,19 @@ const Contact = () => {
               </form>
             </div>
         </div>
-        </div>  
-      </Layout>
+        </div>      </Layout>
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-3H7JM8VK2E'
+        strategy='afterInteractive'
+      />
+      <Script strategy='lazyOnload' id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3H7JM8VK2E');
+        `}
+      </Script>
     </>
   );
 };

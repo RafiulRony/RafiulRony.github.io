@@ -1,21 +1,28 @@
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
-import Head from 'next/head'
-import Image from 'next/image'
-import React from 'react'
-import profilePic from "../../public/images/profile/developer-pic-2.jpg"
-import Skills from '@/components/Skills'
-import Experience from '@/components/Experience'
-import Education from '@/components/Education'
+import AnimatedText from '@/components/AnimatedText';
+import Layout from '@/components/Layout';
+import Head from 'next/head';
+import Image from 'next/image';
+import React, { useEffect } from 'react';
+import profilePic from '../../public/images/profile/developer-pic-2.jpg';
+import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
+import Education from '@/components/Education';
+import Script from 'next/script';
 
-const about = () => {
+const About = () => {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3H7JM8VK2E');
+  }, []);
   return (
     <>
-    <Head>
+      <Head>
         <title>Rafiul | About Page</title>
-    </Head>
-    <main className='flex w-full flex-col items-center justify-center'>
-    <Layout className='pt-16'>
+      </Head>
+      <main className='flex w-full flex-col items-center justify-center'>
+        <Layout className='pt-16'>
         <AnimatedText text="Passion Fuels Purpose!" className='mb-16 sm:text-4xl md:text-5xl lg:text-8xl' />
         <div className='grid w-full sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-2 lg:gap-16'>
             <div className='col-span-1 flex flex-col items-start justify-start'>
@@ -64,11 +71,22 @@ const about = () => {
         <Skills/>
         <Experience/>
         <Education/>
-    </Layout>
-    </main>
+        </Layout>
+      </main>
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-3H7JM8VK2E'
+        strategy='afterInteractive'
+      />
+      <Script strategy='lazyOnload' id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3H7JM8VK2E');
+        `}
+      </Script>
     </>
-    
-  )
-}
+  );
+};
 
-export default about
+export default About;
